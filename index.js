@@ -6,10 +6,18 @@ function onExtractIp() {
   let ipAdreseInt = [];
 
   ipAdreseArray.forEach((el) => {
-    let splitEl = el.split("-").map((item) => {
-      let trimmedItem = item.trim();
-      return ipToNum(trimmedItem);
-    });
+    let splitEl;
+    if (el.includes("-")) {
+      splitEl = el.split("-").map((item) => {
+        let trimmedItem = item.trim();
+        return ipToNum(trimmedItem);
+      });
+    } else {
+      splitEl = `${el}-${el}`.split("-").map((item) => {
+        let trimmedItem = item.trim();
+        return ipToNum(trimmedItem);
+      });
+    }
     if (!isNaN(splitEl[0]) && !isNaN(splitEl[1])) {
       ipAdreseInt.push(splitEl);
     }
@@ -75,7 +83,7 @@ function populateTableBody(arr, table) {
   let tableBody = table.querySelector("tbody");
   arr.forEach((el) => {
     let newTd = document.createElement("td");
-    newTd.innerHTML = `${el[0]}-${el[1]}`;
+    newTd.innerHTML = el[0] === el[1] ? `${el[0]}` : `${el[0]}-${el[1]}`;
     let newTr = document.createElement("tr");
     newTr.appendChild(newTd);
     tableBody.appendChild(newTr);
