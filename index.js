@@ -28,7 +28,7 @@ function onExtractIp() {
       for (let i = j; i < sortedArray.length; i++) {
         if (
           sortedArray[i][0] >= startNum &&
-          sortedArray[i][0] <= endNum &&
+          sortedArray[i][0] <= endNum + 1 &&
           sortedArray[i][1] > endNum
         ) {
           endNum = sortedArray[i][1];
