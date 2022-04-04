@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IpAddressRange</title>
+    <link rel="stylesheet" href="dist/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container m-3">
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Unesi IP adrese"
+          id="ipAdrese"
+          style="height: 200px"
+        ></textarea>
+        <label for="ipAdrese">IP adrese</label>
+        <div class="m-1">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="onExtractIp()"
+          >
+            Load
+          </button>
+          <button type="button" class="btn btn-primary" onclick="onClear()">
+            Clear
+          </button>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">IP address range</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="dist/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</html>
