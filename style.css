@@ -1,6 +1,6 @@
 .form-floating {
   position: relative;
-  max-width: 1000px; /* not relevant */
+  /* max-width: 1000px; not relevant */
   margin: 40px 20px; /* not relevant */
 }
 
@@ -12,10 +12,20 @@
   width: calc(100% - 20px); /* to show scrollbar */
   height: 32px;
   border-radius: 4px; /* (default by BS) */
-  background-color: #ffffff;
+  background-color: #212529;
 }
 
 .form-floating textarea.form-control {
   padding-top: 32px; /* height of pseudo element */
   min-height: 80px; /* not relevant */
+}
+
+body {
+  background-color: #303030;
+  color: white;
+}
+
+#ipAdrese {
+  background-color: #212529;
+  color: white;
 }

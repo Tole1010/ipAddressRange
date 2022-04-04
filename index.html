@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container m-3">
+    <div class="container p-3">
       <div class="form-floating">
         <textarea
           class="form-control"
@@ -21,17 +21,21 @@
         <div class="m-1">
           <button
             type="button"
-            class="btn btn-outline-primary"
+            class="btn btn-outline-light"
             onclick="onExtractIp()"
           >
             Load
           </button>
-          <button type="button" class="btn btn-primary" onclick="onClear()">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            onclick="onClear()"
+          >
             Clear
           </button>
         </div>
       </div>
-      <table class="table table-striped">
+      <table class="table table-dark">
         <thead>
           <tr>
             <th scope="col">IP address range</th>
